@@ -1,0 +1,90 @@
+body {
+    background: #f3f2f1;
+}
+
+.alert {
+    border: red !important;
+}
+
+.appDefaultTheme {
+    background-color: #f3f2f1;
+}
+
+.appDarkTheme {
+    background-color: #201f1f;
+}
+
+.appContrastTheme {
+    background-color: #000000;
+}
+
+.thread {
+    align-items: flex-start !important;
+    -webkit-box-align: start !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 20px;
+}
+
+.thread .ui-layout__start {
+    align-items: flex-start;
+    -webkit-box-align: start;
+}
+
+.thread .ui-layout__start .ui-avatar .ui-label {
+    align-items: flex-start;
+    -webkit-box-align: start;
+}
+
+.thread .ui-layout__main {
+    background-color: #fff;
+}
+
+.thread div:nth-child(3) {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.reply {
+    background: #faf9f8;
+    align-items: flex-start !important;
+    -webkit-box-align: start !important;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+    padding-top: 4px;
+}
+
+.replies div:nth-child(3) {
+    border: none
+}
+
+.reply .ui-layout__start {
+    align-items: flex-start;
+    -webkit-box-align: start;
+}
+
+.reply .ui-layout__start .ui-avatar .ui-label {
+    align-items: flex-start;
+    -webkit-box-align: start;
+}
+
+.reply .ui-layout__main {
+    padding: 4px;
+    background: #faf9f8;
+    border: none;
+}
+
+.channel-outer {
+    width: 100%;
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+
+.channel-inner {
+    width: 100%;
+    height: 380px;
+    padding: 10px;
+}

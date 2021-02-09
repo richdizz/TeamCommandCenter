@@ -1,0 +1,54 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.8",
+    "version": "1.0.0",
+    "showLoadingIndicator": true,
+    "id": "572f3fd6-5c17-41d6-afe6-68cc93f3eca7",
+    "packageName": "com.microsoft.teams.commandcenter",
+    "developer": {
+        "name": "Richdizz.com",
+        "websiteUrl": "https://richdizz.ngrok.io",
+        "privacyUrl": "https://richdizz.ngrok.io/privacy",
+        "termsOfUseUrl": "https://richdizz.ngrok.io/terms"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Command Center",
+        "full": "Command Center for Teams"
+    },
+    "description": {
+        "short": "Aggregates Team thread into a single view",
+        "full": "The Command Center app for Teams aggregates Team channel conversations into a single tiled dashboard"
+    },
+    "accentColor": "#FFFFFF",
+    "staticTabs": [
+        {
+            "entityId": "dashboard",
+            "name": "Command Center",
+            "contentUrl": "https://richdizz.ngrok.io/dashboard?name={loginHint}&tenant={tid}&group={groupId}",
+            "websiteUrl": "https://richdizz.ngrok.io/dashboard?name={loginHint}&tenant={tid}&group={groupId}",
+            "scopes": [
+                "team"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "richdizz.ngrok.io"
+    ],
+    "webApplicationInfo": {
+        "id": "3b71b554-9382-46eb-bc2e-56f7498e4290",
+        "resource": "api://richdizz.ngrok.io/3b71b554-9382-46eb-bc2e-56f7498e4290",
+        "applicationPermissions": [
+            "TeamSettings.Read.Group",
+            "ChannelSettings.Read.Group",
+            "ChannelMessage.Read.Group"
+        ]
+    }
+}
