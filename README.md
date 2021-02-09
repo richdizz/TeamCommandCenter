@@ -31,4 +31,10 @@ Simple app for Microsoft Teams that aggregates multiple channel chats into a sin
 ## Architecture
 In short, the solution is a client-side website (built with TypeScript/React) with server-side APIs the client application and the Microsoft Graph talk to. All the APIs that provide information or update data are secured with an OAuth2 Bearer Strategy via Azure AD. The client application performs single sign-on with Azure AD to acquire access tokens for calling these services. The application also exposes an API for receiving real-time notifications from the Microsoft Graph. Although this webhook API isn't secured by the same Bearer Strategy, it will only process messages that are encrypted by a public key certificate it provides to the Microsoft Graph. When notifications are sent to this API, it decrypts them and notifies clients "listening" over web sockets (specifically using SignalR).
 
+Basic Architecture with standard webhooks
+![Basic Architecture with standard webhooks](/Docs/WebhookArch.png)
+
 I should note that the implementation in this sample uses standard incoming webhooks. However, the webhook API could run in Azure and simply drop the message on a queue the application could listen to. This would allow the application to "pull" notifications in vs allowing direct in-bound messages.
+
+Architecture with webhook alternative where app service has no unsecure endpoints
+![Architecture with webhook alternative where app service has no unsecure endpoints](/Docs/AltWebhookArch.png)
